@@ -74,36 +74,36 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Yahho Watashi Kugisaki Nobara, I am Groups Management Bot !! I can Help You Manage Your Group for you!!, send /help for command list...[.](https://telegra.ph/file/1f054a1f6e857f6c4428d.jpg)
+Yahho Watashi Nobara Desu, I am Groups Management Bot !! I can Help You Manage Your Group for you!!, send /help for command list...[.](https://telegra.ph/file/1f054a1f6e857f6c4428d.jpg)
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ sᴜᴍᴍᴏɴ ➕️", url="t.me/NobarasanRobot?startgroup=true"),
+            text="➕️ sᴜᴍᴍᴏɴ ➕️", url="t.me/RikasanRobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="Nobara_"),
         InlineKeyboardButton(
-            text="ɢʀᴏᴜᴘ", url=f"https://t.me/The_Phantom_Troupe"),
-             
-        InlineKeyboardButton(
-            text="Network", url=f"https://t.me/shinobinet"
+            text="ɢʀᴏᴜᴘ", url=f"https://t.me/The_Phantom_Troupe",
+            text="⛩ Nobara Support ⛩", url=f"https://t.me/supprt_sora"   
+            
+        
         ),
     ],
     [
-        InlineKeyboardButton(text="ꜱᴛᴀʀᴛ ᴜꜱɪɴɢ ʙᴏᴛ", callback_data="help_back"),
+        InlineKeyboardButton(text="ꜱᴛᴀʀᴛ ᴜsɪɴɢ ʙᴏᴛ", callback_data="help_back"),
     ],
 ]
 
 
 HELP_STRINGS = """
-Nobara(https://telegra.ph/file/658c0bfcd61c32c6bbeb5.mp4)
+Hai, Nobara San Desu[.](https://telegra.ph/file/658c0bfcd61c32c6bbeb5.mp4) 
 """
 
-yone_IMG = "https://telegra.ph/file/8cb7697ccae94c9ce5b4d.jpg"
+yone_IMG = "https://telegra.ph/file/2aea4cfb32a76c857217c.jpg"
 
-DONATE_STRING = """Soon."""
+DONATE_STRING = """Durov Is Paying For My Expenses No Need To Donate"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -213,7 +213,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "A jujutsu Sorcerer Never Sleeps![.](https://telegra.ph/file/525af23c3ca680a30f3f7.mp4)\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -304,7 +304,7 @@ def help_button(update, context):
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton(text="Back", callback_data="help_back"),
                                 InlineKeyboardButton(
-                                    text="Group", url="https://t.me/grup_anime_indo"
+                                    text="Group", url="https://t.me/The_Phantom_Troupe"
                                 )]]
                 ),
             )
@@ -369,7 +369,7 @@ Join juga grup kami *Anime Lovers Indo* atau klik tombol *Grup* dibawah ini.
                  [
                     InlineKeyboardButton(text="Kembali", callback_data="yone_back"),
                                 InlineKeyboardButton(
-                                    text="Grup", url="https://t.me/grup_anime_indo"
+                                    text="Group", url="https://t.me/The_Phantom_Troupe"
                                 )
                  ]
                 ]
@@ -390,7 +390,7 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi."👋" I'm *Rika Takanashi*
+            text=""" Hi."👋" I'm *Nobara*
                  \nHere is the [Source Code](https://github.com/Noob-kittu/YoneRobot) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -465,7 +465,7 @@ def get_help(update: Update, context: CallbackContext):
             InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="help_back"),
                                 InlineKeyboardButton(
-                                    text="Group", url="https://t.me/grup_anime_indo"
+                                    text="Group", url="https://t.me/The_Phantom_Troupe"
                                 )]]
             ),
         )
@@ -735,7 +735,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Using long polling.")
+        LOGGER.info("Nigga Nigga Small Dick Nigga Shame On You")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
     if len(argv) not in (1, 3, 4):
