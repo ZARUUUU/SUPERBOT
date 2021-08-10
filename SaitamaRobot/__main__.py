@@ -212,7 +212,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "A jujutsu Sorcerer Never Sleeps![.](https://telegra.ph/file/525af23c3ca680a30f3f7.mp4)\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "A jujutsu Sorcerer Never Sleeps!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
