@@ -85,8 +85,8 @@ buttons = [
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="Nobara_"),
         InlineKeyboardButton(
-            text="ɢʀᴏᴜᴘ", url=f"https://t.me/The_Phantom_Troupe",
-        InlineKeyboardButton(text="⛩Nobara Support⛩ ", url=f"https://t.me/supprt_sora",
+            text="ɢʀᴏᴜᴘ", url=f"https://t.me/The_Phantom_Troupe"),
+        InlineKeyboardButton(text="⛩Nobara Support⛩ ", url=f"https://t.me/supprt_sora"
             
         
         ),
