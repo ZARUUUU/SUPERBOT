@@ -8,9 +8,7 @@ from typing import List
 import aiohttp
 import requests
 from bs4 import BeautifulSoup
-from countryinfo import CountryInfo
-from faker import Faker
-from faker.providers import internet
+
 from PyDictionary import PyDictionary
 from pyrogram import errors, filters
 from pyrogram.types import (
@@ -165,10 +163,6 @@ async def inline_query_handler(client, query):
             tex = text.split(None, 1)[1]
             answerss = await google_search_func(answers, tex)
             await client.answer_inline_query(query.id, results=answerss, cache_time=10)
-        elif text.split()[0] == "webss":
-            tex = text.split(None, 1)[1]
-            answerss = await webss(tex)
-            await client.answer_inline_query(query.id, results=answerss, cache_time=2)
         elif text.split()[0] == "bitly":
             tex = text.split(None, 1)[1]
             answerss = await shortify(tex)
@@ -965,38 +959,6 @@ async def inline_query_handler(client, query):
 
     except (IndexError, TypeError, KeyError, ValueError):
         return
-
-
-def generate_time(to_find: str, findtype: List[str]) -> str:
-    data = requests.get(
-        f"http://api.timezonedb.com/v2.1/list-time-zone"
-        f"?key={TIME_API_KEY}"
-        f"&format=json"
-        f"&fields=countryCode,countryName,zoneName,gmtOffset,timestamp,dst"
-    ).json()
-
-    for zone in data["zones"]:
-        for eachtype in findtype:
-            if to_find in zone[eachtype].lower():
-                country_name = zone["countryName"]
-                country_zone = zone["zoneName"]
-                country_code = zone["countryCode"]
-
-                if zone["dst"] == 1:
-                    daylight_saving = "Yes"
-                else:
-                    daylight_saving = "No"
-
-                date_fmt = r"%d-%m-%Y"
-                time_fmt = r"%H:%M:%S"
-                day_fmt = r"%A"
-                gmt_offset = zone["gmtOffset"]
-                timestamp = datetime.datetime.now(
-                    datetime.timezone.utc
-                ) + datetime.timedelta(seconds=gmt_offset)
-                current_date = timestamp.strftime(date_fmt)
-                current_time = timestamp.strftime(time_fmt)
-                current_day = timestamp.strftime(day_fmt)
 
                 break
 
