@@ -960,8 +960,6 @@ async def inline_query_handler(client, query):
     except (IndexError, TypeError, KeyError, ValueError):
         return
 
-                break
-
     try:
         result = (
             f" DATE AND TIME OF COUNTRY"
