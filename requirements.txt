@@ -55,3 +55,11 @@ register
 dispatcher
 search_engine_parser 
 cloudscraper
+countryinfo
+faker
+PyDictionary
+tswift
+youtubesearchpython
+googletrans
+motor
+pykeyboard
