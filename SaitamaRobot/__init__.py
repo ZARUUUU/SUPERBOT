@@ -83,6 +83,8 @@ if ENV:
     BAN_STICKER = os.environ.get('BAN_STICKER')
     ARQ_API = os.environ.get('ARQ_API')           
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
+    REDIS_URL = os.environ.get("REDIS_URL", None)
+
     CASH_API_KEY = os.environ.get('CASH_API_KEY', None)
     TIME_API_KEY = os.environ.get('TIME_API_KEY', None)
     AI_API_KEY = os.environ.get('AI_API_KEY', None)
@@ -176,6 +178,32 @@ DRAGONS.add(OWNER_ID)
 
 DEV_USERS.add(OWNER_ID)
 
+    
+REDIS = StrictRedis.from_url(REDIS_URL,decode_responses=True)
+
+try:
+
+    REDIS.ping()
+
+    LOGGER.info("Your redis server is now alive!")
+
+except BaseException:
+
+    raise Exception("Your redis server is not alive, please check again.")
+
+finally:
+
+   REDIS.ping()
+
+   LOGGER.info("Your redis server is now alive!")
+    
+    
+    
+    
+    
+    
+
+    
     
 if not SPAMWATCH_API:
     sw = None
