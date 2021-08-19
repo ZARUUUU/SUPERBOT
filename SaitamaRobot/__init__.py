@@ -7,7 +7,6 @@ from pyrogram import Client, errors
 
 import telegram.ext as tg
 from telethon import TelegramClient
-from redis import StrictRedis
 
 
 StartTime = time.time()
@@ -180,25 +179,7 @@ DRAGONS.add(OWNER_ID)
 
 DEV_USERS.add(OWNER_ID)
 
-    
-REDIS = StrictRedis.from_url(REDIS_URL,decode_responses=True)
 
-try:
-
-    REDIS.ping()
-
-    LOGGER.info("Your redis server is now alive!")
-
-except BaseException:
-
-    raise Exception("Your redis server is not alive, please check again.")
-
-finally:
-
-   REDIS.ping()
-
-   LOGGER.info("Your redis server is now alive!")
-    
     
     
     
