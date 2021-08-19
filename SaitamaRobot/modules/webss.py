@@ -1,30 +1,13 @@
-from pyrogram import filters
+from SaitamaRobot import pbot
+from pyrogram import filters 
+import requests
+import os
 
-from SaitamaRobot import pbot as app
-from SaitamaRobot.utils.errors import capture_err
-
-__mod_name__ = "WebSS"
-__help__ = "`/webss` [URL] - Take A Screenshot Of A Webpage"
-
-
-@app.on_message(filters.command("webss"))
-@capture_err
-async def take_ss(_, message):
-    try:
-        if len(message.command) != 2:
-            await message.reply_text("Give A Url To Fetch Screenshot.")
-            return
-        url = message.text.split(None, 1)[1]
-        m = await message.reply_text("**Taking Screenshot**")
-        await m.edit("**Uploading**")
-        try:
-            await app.send_photo(
-                message.chat.id,
-                photo=f"https://webshot.amanoteam.com/print?q={url}",
-            )
-        except TypeError:
-            await m.edit("No Such Website.")
-            return
-        await m.delete()
-    except Exception as e:
-        await message.reply_text(str(e))
+@pbot.on_message(filters.command("webss"))
+def webss(_,message):
+   site = message.text.replace(message.text.split(' ')[0], '')
+   res = requests.get("https://webshot.amanoteam.com/print?q={}".format(site)).content
+   with open("webss.jpg" ,"wb") as f:
+        f.write(res)
+   pbot.send_photo(message.chat.id , "webss.jpg")
+   os.remove("webss.jpg")
