@@ -74,19 +74,19 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Yahho Watashi Nobara Desu, I am Groups Management Bot !! I can Help You Manage Your Group for you!!, send /help for command list...[.](https://telegra.ph/file/1f054a1f6e857f6c4428d.jpg)
+Yahallo Watashi wa Echidna, I am Groups Management Bot !! I can Help You Manage Your Group for you!!, send /help for command list...[.](https://telegra.ph/file/0f3e7311c5023117706b7.jpg)
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ sᴜᴍᴍᴏɴ ➕️", url="t.me/RikasanRobot?startgroup=true"),
+            text="➕️ Add Me ➕️", url="t.me/Echidna_Robot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="Nobara_"),
+        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="Echidna"),
         InlineKeyboardButton(
             text="ɢʀᴏᴜᴘ", url=f"https://t.me/The_Phantom_Troupe"),
-        InlineKeyboardButton(text="⛩Nobara Support⛩ ", url=f"https://t.me/supprt_sora"
+        InlineKeyboardButton(text="Echidna Support ", url=f"https://t.me/Echidna_Support"
             
         
         ),
@@ -98,7 +98,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-Hai, Nobara San Desu[.](https://telegra.ph/file/658c0bfcd61c32c6bbeb5.mp4) 
+Hai, Echidna Desu[.](https://telegra.ph/file/934f6b6ae04c58f0d6ec2.jpg) 
 """
 
 yone_IMG = "https://telegra.ph/file/2aea4cfb32a76c857217c.jpg"
@@ -213,7 +213,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "A jujutsu Sorcerer Never Sleeps!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "I am awake Already !\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
