@@ -85,7 +85,7 @@ buttons = [
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="Echidna"),
         InlineKeyboardButton(
-            text="ɢʀᴏᴜᴘ", url=f"https://t.me/The_Phantom_Troupe"),
+            text="ɢʀᴏᴜᴘ", url=f"https://t.me/anime_hubon"),
         InlineKeyboardButton(text="Echidna Support ", url=f"https://t.me/Echidna_Support"
             
         
