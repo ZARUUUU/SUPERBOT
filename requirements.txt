@@ -33,6 +33,7 @@ cachetools
 fontTools
 gtts
 pyrogram
+cv2
 Python_arq
 redis
 nekos.py
