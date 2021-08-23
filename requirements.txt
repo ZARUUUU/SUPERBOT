@@ -33,7 +33,7 @@ cachetools
 fontTools
 gtts
 pyrogram
-cv2
+
 Python_arq
 redis
 nekos.py
@@ -59,3 +59,4 @@ cloudscraper
 img2pdf
 nhentai.py
 heroku3
+opencv-python
