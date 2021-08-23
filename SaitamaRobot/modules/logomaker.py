@@ -3,7 +3,7 @@ import os
 
 from PIL import Image, ImageDraw, ImageFont
 
-from SaitamaRobot.events import register
+from SaitamaRobot.event import register
 from SaitamaRobot import OWNER_ID, telethn as tbot
 
 
