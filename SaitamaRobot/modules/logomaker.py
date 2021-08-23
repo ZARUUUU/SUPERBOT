@@ -16,7 +16,7 @@ async def lego(event):
  await event.reply('Creating your logo...wait!')
  try:
     text = event.pattern_match.group(1)
-    img = Image.open('./Cutiepii_Robot/utils/Logo/blackbg.jpg')
+    img = Image.open('./SaitamaRobot/utils/Logo/blackbg.jpg')
     draw = ImageDraw.Draw(img)
     image_widthz, image_heightz = img.size
     pointsize = 500
@@ -30,13 +30,13 @@ async def lego(event):
     x = (image_widthz-w)/2
     y = ((image_heightz-h)/2+6)
     draw.text((x, y), text, font=font, fill="black", stroke_width=25, stroke_fill="yellow")
-    fname2 = "LogoByCutiepii.png"
+    fname2 = "LogoByNobara.png"
     img.save(fname2, "png")
-    await tbot.send_file(event.chat_id, fname2, caption="Made By @Cutiepii_Robot")
+    await tbot.send_file(event.chat_id, fname2, caption="Made By @Nobara_Superbot")
     if os.path.exists(fname2):
             os.remove(fname2)
  except Exception as e:
-   await event.reply(f'Error Report @Black_Knights_Union_Support, {e}')
+   await event.reply(f'Error Report @Supprt_Sora, {e}')
 
 
 
@@ -50,13 +50,13 @@ async def lego(event):
  await event.reply('Creating your logo...wait!')
  try:
     text = event.pattern_match.group(1)
-    img = Image.open('./Cutiepii_Robot/utils/Logo/blackbg.jpg')
+    img = Image.open('./SaitamaRobot/utils/Logo/blackbg.jpg')
     draw = ImageDraw.Draw(img)
     image_widthz, image_heightz = img.size
     pointsize = 500
     fillcolor = "white"
     shadowcolor = "blue"
-    font = ImageFont.truetype("./Cutiepii_Robot/utils/Logo/Maghrib.ttf", 1000)
+    font = ImageFont.truetype("./SaitamaRobot/utils/Logo/Maghrib.ttf", 1000)
     w, h = draw.textsize(text, font=font)
     h += int(h*0.21)
     image_width, image_height = img.size
@@ -64,9 +64,9 @@ async def lego(event):
     x = (image_widthz-w)/2
     y = ((image_heightz-h)/2+6)
     draw.text((x, y), text, font=font, fill="white", stroke_width=0, stroke_fill="white")
-    fname2 = "LogoByCutiepii.png"
+    fname2 = "LogoByNobara.png"
     img.save(fname2, "png")
-    await tbot.send_file(event.chat_id, fname2, caption="Made By @Cutiepii_Robot")
+    await tbot.send_file(event.chat_id, fname2, caption="Made By @Nobara_Superbot")
     if os.path.exists(fname2):
             os.remove(fname2)
  except Exception as e:
