@@ -61,3 +61,4 @@ nhentai.py
 heroku3
 opencv-python
 youtube_dl
+mtranslate
