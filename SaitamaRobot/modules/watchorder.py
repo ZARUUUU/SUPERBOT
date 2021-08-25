@@ -33,4 +33,4 @@ def watchorderx(_,message):
 
 			data = x.text
 
-	message.reply_text(f'<b>Watchorder of {anime}: </b>\n```<i>{data}</i>```')
+	message.reply_text(f'<b>Watchorder of {anime}: </b>\n```<b>{data}</b>```')
