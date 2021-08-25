@@ -80,7 +80,7 @@ Yahho Watashi Nobara Desu, I am Groups Management Bot !! I can Help You Manage Y
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ sᴜᴍᴍᴏɴ ➕️", url="t.me/RikasanRobot?startgroup=true"),
+            text="➕️ sᴜᴍᴍᴏɴ ➕️", url="t.me/Nobara_Superbot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="Nobara_"),
