@@ -33,6 +33,7 @@ cachetools
 fontTools
 gtts
 pyrogram
+wget
 
 Python_arq
 redis
