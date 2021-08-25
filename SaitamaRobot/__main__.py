@@ -74,19 +74,19 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Yahho Watashi Nobara Desu, I am Groups Management Bot !! I can Help You Manage Your Group for you!!, send /help for command list...[.](https://telegra.ph/file/1f054a1f6e857f6c4428d.jpg)
+Yahallo Watashi wa Echidna, I am Groups Management Bot !! I can Help You Manage Your Group for you!!, send /help for command list...[.](https://telegra.ph/file/0f3e7311c5023117706b7.jpg)
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ sᴜᴍᴍᴏɴ ➕️", url="t.me/Nobara_Superbot?startgroup=true"),
+            text="➕️ Add Me ➕️", url="t.me/Echidna_Robot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="Nobara_"),
+        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="Echidna"),
         InlineKeyboardButton(
-            text="ɢʀᴏᴜᴘ", url=f"https://t.me/The_Phantom_Troupe"),
-        InlineKeyboardButton(text="⛩Nobara Support⛩ ", url=f"https://t.me/NobaraSupport"
+            text="ɢʀᴏᴜᴘ", url=f"https://t.me/anime_hubon"),
+        InlineKeyboardButton(text="Echidna Support ", url=f"https://t.me/Echidna_Support"
             
         
         ),
@@ -98,7 +98,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-Hai, Nobara San Desu[.](https://telegra.ph/file/658c0bfcd61c32c6bbeb5.mp4) 
+Hai, Echidna Desu[.](https://telegra.ph/file/934f6b6ae04c58f0d6ec2.jpg) 
 """
 
 yone_IMG = "https://telegra.ph/file/2aea4cfb32a76c857217c.jpg"
@@ -213,7 +213,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "A jujutsu Sorcerer Never Sleeps!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "I am awake Already !\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -304,7 +304,7 @@ def help_button(update, context):
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton(text="Back", callback_data="help_back"),
                                 InlineKeyboardButton(
-                                    text="Group", url="https://t.me/The_Phantom_Troupe"
+                                    text="Group", url="https://t.me/anime_hubon"
                                 )]]
                 ),
             )
@@ -353,13 +353,9 @@ def yone_about_callback(update, context):
         query.message.edit_text(
             text="""
 ℹ️ **Tentang Bot Itsuki.** 
-
 Hai
-
 *Itsuki* adalah bot pengelola grup bertema anime.
-
 *Itsuki* memiliki fungsi mengelola Grup seperti *Anti-Flood*, *Blacklist* dll yang dapat membantu grup Anda dari spammer dan kang toxic.
-
 Join juga grup kami *Anime Lovers Indo* atau klik tombol *Grup* dibawah ini.
 """,
             parse_mode=ParseMode.MARKDOWN,
@@ -369,7 +365,7 @@ Join juga grup kami *Anime Lovers Indo* atau klik tombol *Grup* dibawah ini.
                  [
                     InlineKeyboardButton(text="Kembali", callback_data="yone_back"),
                                 InlineKeyboardButton(
-                                    text="Group", url="https://t.me/The_Phantom_Troupe"
+                                    text="Group", url="https://t.me/anime_hubon"
                                 )
                  ]
                 ]
@@ -465,7 +461,7 @@ def get_help(update: Update, context: CallbackContext):
             InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="help_back"),
                                 InlineKeyboardButton(
-                                    text="Group", url="https://t.me/The_Phantom_Troupe"
+                                    text="Group", url="https://t.me/anime_hubon"
                                 )]]
             ),
         )
@@ -689,7 +685,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "A Jujutsu Sorcerer Never Sleeps")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Echidna is Being Sleepy Head For Some Time")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
