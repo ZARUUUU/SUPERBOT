@@ -114,7 +114,7 @@ def promote(update: Update, context: CallbackContext) -> str:
 @can_promote
 @user_admin
 @loggable
-def fullpromotes(update: Update, context: CallbackContext) -> str:
+def fullpromote(update: Update, context: CallbackContext) -> str:
     bot = context.bot
     args = context.args
 
@@ -162,6 +162,7 @@ def fullpromotes(update: Update, context: CallbackContext) -> str:
             can_invite_users=bot_member.can_invite_users,
             can_promote_members=bot_member.can_promote_members,
             can_restrict_members=bot_member.can_restrict_members,
+            can_manage_voice_chats=bot.can_manage_voice_chats,
             can_pin_messages=bot_member.can_pin_messages)
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
@@ -566,7 +567,7 @@ PIN_HANDLER = CommandHandler("pin", pin, filters=Filters.group)
 UNPIN_HANDLER = CommandHandler("unpin", unpin, filters=Filters.group)
 
 INVITE_HANDLER = DisableAbleCommandHandler("invitelink", invite)
-FULLPROMOTE_HANDLER = DisableAbleCommandHandler("fullpromotes", fullpromotes)
+FULLPROMOTE_HANDLER = DisableAbleCommandHandler("fullpromote", fullpromote)
 
 PROMOTE_HANDLER = DisableAbleCommandHandler("promote", promote)
 DEMOTE_HANDLER = DisableAbleCommandHandler("demote", demote)
