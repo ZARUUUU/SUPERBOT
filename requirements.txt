@@ -63,3 +63,4 @@ heroku3
 opencv-python
 youtube_dl
 mtranslate
+envparse==0.1.6
