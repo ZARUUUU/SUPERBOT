@@ -114,7 +114,7 @@ def promote(update: Update, context: CallbackContext) -> str:
 @can_promote
 @user_admin
 @loggable
-def fullpromote(update: Update, context: CallbackContext) -> str:
+def fullpromotes(update: Update, context: CallbackContext) -> str:
     bot = context.bot
     args = context.args
 
@@ -566,7 +566,7 @@ PIN_HANDLER = CommandHandler("pin", pin, filters=Filters.group)
 UNPIN_HANDLER = CommandHandler("unpin", unpin, filters=Filters.group)
 
 INVITE_HANDLER = DisableAbleCommandHandler("invitelink", invite)
-FULLPROMOTE_HANDLER = DisableAbleCommandHandler("fullpromote", fullpromote)
+FULLPROMOTE_HANDLER = DisableAbleCommandHandler("fullpromotes", fullpromotes)
 
 PROMOTE_HANDLER = DisableAbleCommandHandler("promote", promote)
 DEMOTE_HANDLER = DisableAbleCommandHandler("demote", demote)
