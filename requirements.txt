@@ -34,7 +34,7 @@ fontTools
 gtts
 pyrogram
 wget
-
+Faker
 Python_arq
 redis
 nekos.py
@@ -55,7 +55,6 @@ html2text
 bing_image_downloader
 register
 dispatcher
-search_engine_parser 
 cloudscraper
 img2pdf
 nhentai.py
@@ -64,3 +63,7 @@ opencv-python
 youtube_dl
 mtranslate
 envparse==0.1.6
+PyDictionary
+search-engine-parser
+youtube-search-python
+countryinfo
