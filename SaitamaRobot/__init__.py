@@ -97,6 +97,7 @@ if ENV:
     BOT_ID = os.environ.get('BOT_ID' , None)
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
+    OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", "")
     try:
         BL_CHATS = set(int(x) for x in os.environ.get('BL_CHATS', "").split())
     except ValueError:
@@ -147,7 +148,7 @@ else:
     CERT_PATH = Config.CERT_PATH
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
-
+    OPENWEATHERMAP_ID = Config.OPENWEATHERMAP_ID
     DB_URI = Config.SQLALCHEMY_DATABASE_URI
     DONATION_LINK = Config.DONATION_LINK
     LOAD = Config.LOAD
