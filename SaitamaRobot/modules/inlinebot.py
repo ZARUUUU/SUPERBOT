@@ -29,9 +29,6 @@ from SaitamaRobot.function.inlinehelper import *
 from SaitamaRobot.function.pluginhelpers import fetch, json_prettify
 from SaitamaRobot.services.pyrogram import pbot as app
 
-OPENWEATHERMAP_ID = get_str_key("OPENWEATHERMAP_ID", "")
-TIME_API_KEY = get_str_key("TIME_API_KEY", required=False)
-
 dictionary = PyDictionary()
 
 
