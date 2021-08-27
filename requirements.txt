@@ -67,3 +67,5 @@ PyDictionary
 search-engine-parser
 youtube-search-python
 countryinfo
+motor
+Python_ARQ
