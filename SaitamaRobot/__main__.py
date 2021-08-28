@@ -80,13 +80,13 @@ Yahho Watashi Nobara Desu, I am Groups Management Bot !! I can Help You Manage Y
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ sᴜᴍᴍᴏɴ ➕️", url="t.me/Nobara_Superbot?startgroup=true"),
+            text="➕️ sᴜᴍᴍᴏɴ ➕️", url="t.me/Operatorsuperbot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="Nobara_"),
+        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="SUPER_"),
         InlineKeyboardButton(
-            text="ɢʀᴏᴜᴘ", url=f"https://t.me/The_Phantom_Troupe"),
-        InlineKeyboardButton(text="⛩Nobara Support⛩ ", url=f"https://t.me/NobaraSupport"
+            text="ɢʀᴏᴜᴘ", url=f"https://t.me/Gymglassheroes"),
+        InlineKeyboardButton(text="⛩SUPER Support⛩ ", url=f"https://t.me/Gymglassheroes"
             
         
         ),
@@ -98,10 +98,10 @@ buttons = [
 
 
 HELP_STRINGS = """
-Hai, Nobara San Desu[.](https://telegra.ph/file/658c0bfcd61c32c6bbeb5.mp4) 
+Hai,[.](https://telegra.ph/file/300bea07ecc939b6775a9.jpg) 
 """
 
-yone_IMG = "https://telegra.ph/file/2aea4cfb32a76c857217c.jpg"
+yone_IMG = "https://telegra.ph/file/300bea07ecc939b6775a9.jpg"
 
 DONATE_STRING = """Durov Is Paying For My Expenses No Need To Donate"""
 
@@ -390,7 +390,7 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi."👋" I'm *Nobara*
+            text=""" Hi."👋" I'm *SUPER*
                  \nHere is the [Source Code](https://github.com/Noob-kittu/YoneRobot) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
